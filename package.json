@@ -1,0 +1,43 @@
+{
+	"name": "react-native-basic-start",
+	"version": "1.0.0",
+	"description": "Basic starter template for react native",
+	"scripts": {
+		"release:major": "npx release-it -- major",
+		"release:minor": "npx release-it -- minor",
+		"release:patch": "npx release-it -- patch"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/omer-ayhan/react-native-basic-start.git"
+	},
+	"keywords": [
+		"template",
+		"boilerplate",
+		"starter",
+		"react-native",
+		"react",
+		"native"
+	],
+	"author": "omer-ayhan <om.ayhan247@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/omer-ayhan/react-native-basic-start/issues"
+	},
+	"homepage": "https://github.com/omer-ayhan/react-native-basic-start/",
+	"release-it": {
+		"git": {
+			"commitMessage": "chore: release v${version}"
+		},
+		"plugins": {
+			"@release-it/conventional-changelog": {
+				"preset": "angular",
+				"infile": "CHANGELOG.md"
+			}
+		}
+	},
+	"dependencies": {
+		"@release-it/conventional-changelog": "^5.0.0",
+		"release-it": "^15.3.0"
+	}
+}
