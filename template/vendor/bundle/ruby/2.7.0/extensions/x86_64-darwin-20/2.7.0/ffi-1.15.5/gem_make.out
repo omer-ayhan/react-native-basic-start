@@ -1,5 +1,5 @@
 current directory: /Users/omerayhan/Desktop/Projects/react-native-basic-start/template/vendor/bundle/ruby/2.7.0/gems/ffi-1.15.5/ext/ffi_c
-/Users/omerayhan/.rvm/rubies/ruby-2.7.5/bin/ruby -I /Users/omerayhan/.rvm/rubies/ruby-2.7.5/lib/ruby/2.7.0 -r ./siteconf20220811-8615-1gv57pw.rb extconf.rb
+/Users/omerayhan/.rvm/rubies/ruby-2.7.5/bin/ruby -I /Users/omerayhan/.rvm/rubies/ruby-2.7.5/lib/ruby/2.7.0 -r ./siteconf20220811-19664-bncobf.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
 checking for ffi_raw_call()... yes
@@ -40,4 +40,4 @@ linking shared-object ffi_c.bundle
 
 current directory: /Users/omerayhan/Desktop/Projects/react-native-basic-start/template/vendor/bundle/ruby/2.7.0/gems/ffi-1.15.5/ext/ffi_c
 make "DESTDIR=" install
-/usr/local/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20220811-8615-fziprd
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 ffi_c.bundle ./.gem.20220811-19664-10sr1x2
