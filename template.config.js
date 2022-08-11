@@ -1,5 +1,5 @@
 module.exports = {
-	placeholderName: "react-native-basic-starter",
+	placeholderName: "ProjectName",
 	templateDir: "./template",
 	postInitScript: "./post-init.script.sh",
 };
