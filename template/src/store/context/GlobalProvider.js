@@ -1,4 +1,4 @@
-import {createContext, useReducer} from 'react';
+import React, {createContext, useReducer} from 'react';
 
 import store from './store';
 import reducer from './reducer';
@@ -9,7 +9,7 @@ export default function GlobalProvider({children}) {
   const [state, dispatch] = useReducer(reducer, store);
   return (
     <GlobalContext.Provider
-      values={{
+      value={{
         state,
         dispatch,
       }}>
