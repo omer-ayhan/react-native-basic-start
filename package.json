@@ -1,6 +1,6 @@
 {
 	"name": "react-native-basic-start",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Basic starter template for react native",
 	"scripts": {
 		"release:major": "npx release-it -- major",
