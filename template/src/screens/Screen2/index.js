@@ -1,5 +1,6 @@
 import {View, Text, Button} from 'react-native';
 import React from 'react';
+import Config from 'react-native-config';
 
 import {SET_TITLE} from '../../store/context/types';
 import routes from '../../constants/routes';
@@ -9,6 +10,7 @@ const {AppStackRoutes} = routes;
 
 export default function Screen2({navigation}) {
   const {state, dispatch} = useGlobalStore();
+  const {ENV_TEST} = Config;
 
   const goToScreen1 = () => {
     dispatch({
@@ -20,6 +22,7 @@ export default function Screen2({navigation}) {
 
   return (
     <View>
+      <Text>Env Test: {ENV_TEST}</Text>
       <Text>{state.title}</Text>
       <Button onPress={goToScreen1} title="Go To Screen1" />
     </View>
