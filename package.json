@@ -1,5 +1,5 @@
 {
-	"name": "@omer-ayhan/react-native-basic-start",
+	"name": "react-native-basic-start",
 	"version": "1.0.0",
 	"description": "Basic starter template for react native",
 	"scripts": {
@@ -39,5 +39,8 @@
 	"dependencies": {
 		"@release-it/conventional-changelog": "^5.0.0",
 		"release-it": "^15.3.0"
+	},
+	"publishConfig": {
+		"access": "public"
 	}
 }
