@@ -1,35 +1,28 @@
 const {exec} = require('child_process');
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+const argv = require('minimist')(process.argv.slice(2));
 
-readline.question(`Please enter your android device name: `, deviceName => {
-  if (deviceName.length > 0) {
-    exec(`emulator -avd ${deviceName}`, (error, _, stderr) => {
-      if (error) {
-        console.log(
+if (argv?.emulator) {
+  const args = argv?.args ? argv.args.split(',').join(' ') : '';
+  exec(`emulator -avd ${argv.emulator} ${args}`)
+    .on('error', err => {
+      console.error('\x1b[41m\x1b[37m%s\x1b[0m', 'error', ':', err);
+    })
+    .on('exit', code => {
+      if (code !== 0) {
+        console.error(
           '\x1b[41m\x1b[37m%s\x1b[0m',
-          'command failed',
+          'error',
           ':',
-          `stderr: ${error}`,
+          'emulator exited with code',
+          code,
         );
-        return;
       }
-      console.log(
-        '\x1b[41m\x1b[37m%s\x1b[0m',
-        'error',
-        ':',
-        `stderr: ${stderr}`,
-      );
     });
-  } else {
-    console.log(
-      '\x1b[41m\x1b[37m%s\x1b[0m',
-      'error',
-      ':',
-      'device name is empty',
-    );
-  }
-  readline.close();
-});
+} else {
+  console.log(
+    '\x1b[41m\x1b[37m%s\x1b[0m',
+    'error',
+    ':',
+    'Please specify an emulator name to run',
+  );
+}
